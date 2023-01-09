@@ -1,0 +1,99 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  overflow: hidden;
+}
+
+main {
+  display: flex;
+  align-items: center;
+  flex-direction: column-reverse;
+}
+#profile {
+  appearance: none;
+  width: 150px;
+  padding: 2px;
+  background-image: url("../assets/img/arrow-select.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: 95%;
+}
+.section-left {
+  margin: 5%;
+  text-align: center;
+}
+.section-right {
+  padding: 5%;
+  align-items: center;
+  position: relative;
+  display: flex;
+  background-size: contain;
+}
+.arrow {
+  position: absolute;
+}
+.arrow-back {
+  z-index: -1;
+  width: 100%;
+  right: 0;
+}
+.arrow-front {
+  z-index: 1;
+  right: 0;
+  height: inherit;
+  width: 40%;
+}
+img {
+  display: block;
+  width: 100%;
+  height: inherit;
+}
+.picture {
+  margin: auto;
+}
+.picture img {
+  border-radius: 50%;
+  box-shadow: 0px 1px 23px rgb(0 0 0 / 20%);
+}
+
+img {
+  display: block;
+  width: 100%;
+}
+.picture {
+  border-radius: 50%;
+  max-width: 75%;
+  box-shadow: 0px 1px 23px rgb(0 0 0 / 20%);
+}
+@media screen and (min-width: 750px) {
+  main {
+    display: grid;
+    grid-template-columns: 40% 60%;
+  }
+  .section-left {
+    margin-left: 20%;
+    text-align: initial;
+  }
+  .section-right {
+    height: 100vh;
+    display: flex;
+  }
+  .picture {
+    margin-left: 10%;
+  }
+}
+@media screen and (max-width: 1400px) {
+  .arrow-back {
+    height: inherit;
+  }
+}
+
+@media screen and (min-width: 1900px) {
+  .section-left {
+    margin-left: 30%;
+  }
+  .arrow-front {
+    width: 50%;
+  }
+}
